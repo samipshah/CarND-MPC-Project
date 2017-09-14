@@ -177,6 +177,9 @@ vector<double> MPC::Solve(Eigen::VectorXd state, Eigen::VectorXd coeffs) {
   double epsi = state[5];
 
   // XXX - why does this not work ??
+  // idea is to predicting state of the car 100ms down the time
+  // and solve it normally, so the first element in delta and a will 
+  // suggest a control output for that state.
   // for(double i=0.0; i < latency; i += dt) {
   //   // run model with constant actuator and steering_angle
   //   std::cout << i << endl;
