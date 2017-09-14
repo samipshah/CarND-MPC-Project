@@ -7,6 +7,8 @@
 using namespace std;
 
 class MPC {
+  double steering_;
+  double throttle_;
  public:
   MPC();
 
